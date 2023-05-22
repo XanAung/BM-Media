@@ -85,10 +85,15 @@ a {
 .mobile-nav {
   background-color: #146C94;
   color: #FEFF86;
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   height: 50px;
+}
+@media screen and (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+  }
 }
 .mobile-nav img {
   margin: 0 20px;
@@ -101,7 +106,6 @@ a {
 .mobile-nav i {
   margin-right: 20px;
   font-size: 18px;
-  cursor: pointer;
 }
 
 .side-nav-check:checked + .side-nav-wrapper {
@@ -146,6 +150,8 @@ a {
   min-width: 250px;
   background-color: #146C94;
   transform: scale(1, 0);
+  transform-origin: top;
+  transition: 300ms;
 }
 
 /*# sourceMappingURL=index.css.map */

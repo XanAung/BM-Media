@@ -9,10 +9,13 @@
 .mobile-nav
     background-color: $primary
     color: $accent
-    display: flex
+    display: none
     align-items: center
     position: relative
     height: 50px
+
+    @include mQ("768px")
+        display: flex
 
     img 
         margin: 0 20px
@@ -26,7 +29,6 @@
         margin-right: 20px
         // padding: 16px
         font-size: 18px
-        cursor: pointer
 
 
 .side-nav-check:checked
@@ -71,6 +73,8 @@
     min-width: 250px
     background-color: $primary
     transform: scale(1,0)
+    transform-origin: top
+    transition: 300ms
 
 
 
