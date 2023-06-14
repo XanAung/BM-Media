@@ -1,0 +1,128 @@
+.nav-radio-group
+    display: none
+
+nav 
+    background-color: $primary
+    display: flex
+    height: 65px
+    align-items: center
+
+    @include mQ("768px")
+        display: none
+
+    a,label 
+        color: $default
+        cursor: pointer
+
+    .fa-sort-down
+        margin-left: 5px
+        transition: 100ms
+
+    .sort-up
+        transform: rotate(-180deg)
+        position: relative
+        top: 5px
+
+    > ul 
+        display: flex
+        flex: 1
+        justify-content: flex-end
+
+        > li 
+            cursor: pointer
+            padding: 20px
+            margin-top: 15px
+            position: relative
+
+            input 
+                &:checked 
+                    &+a::after 
+                        transform: scale(1,1)
+
+            > a 
+                cursor: pointer
+
+                label
+                    cursor: pointer
+                    padding: 10px
+
+                &:after
+                  content: ""
+                  background-color: $accent
+                  display: block
+                  height: 5px
+                  margin-top: 10px
+                  border-radius: 20px
+                  transform: scale(0,1)
+                  transition: 100ms
+
+.nav-dropdown-check
+    display: none
+
+.nav-dropdown-check
+    &:checked
+        &+.nav-dropdown
+            transform: scale(1,1)
+
+.nav-dropdown
+    background-color: $primary
+    position: absolute
+    top: 60px
+    right: 0
+    min-width: 250px
+    transform: scale(1,0)
+    transform-origin: top
+    transition: 300ms
+    z-index: 100
+
+    li
+        line-height: 50px
+        padding-left: 36px
+        border-bottom: 1px solid $fair
+        cursor: pointer
+        transition: padding 200ms
+
+        &:hover
+            background-color: $secondary
+            padding-left: 45px
+
+            a
+                color: $accent
+
+.update-news 
+    background-color: $secondary
+    display: flex
+    height: 65px
+    align-items: center
+    @include mQ("768px")
+        display: none
+
+    > button 
+        margin-left: 20px
+        color: $accent
+        background-color: $primary
+        border: none
+        width: 150px
+        padding: 10px 15px
+    
+    p 
+        flex: 1
+        color: $default
+    
+    input 
+        outline: none
+        border: none
+        padding: 8px 15px
+
+    form
+        position: relative
+        margin-right: 20px
+
+        button 
+            position: absolute
+            top: 5px
+            right: 5px
+            border: none
+            padding: 5px
+            background-color: $default
+            color: $primary

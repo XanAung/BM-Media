@@ -44,7 +44,157 @@
         </div>
       </div>
     </header>
+    <div class="container"> 
+      <nav> <a href="#" style="margin-left: 20px">ပင်မစာမျက်နှာ</a>
+        <ul> 
+          <li> 
+            <input class="nav-radio-group" type="radio" id="homeaffair-radio" name="nav-radio"/><a href="#">
+              <label for="homeaffair-radio">ပြည်တွင်း</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="mkn-radio" name="nav-radio"/><a href="#">
+              <label for="mkn-radio">မြစ်ကြီးနား</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="article-radio" name="nav-radio"/><a href="#">
+              <label for="article-radio">ဆောင်းပါး</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="inter-radio" name="nav-radio"/><a href="#">
+              <label for="inter-radio">နိုင်ငံတကာ</label></a>
+          </li>
+          <li> 
+            <input class="nav-radio-group" type="radio" id="other-radio" name="nav-radio"/>
+            <label for="nav-dropdown-check">အခြား<i class="fas fa-sort-down nav-sort-down"></i></label>
+            <input class="nav-dropdown-check" type="checkbox" id="nav-dropdown-check" onclick="changeSortDown(this)"/>
+            <ul class="nav-dropdown">
+              <li> <a href="#">အားကစား</a></li>
+              <li> <a href="#">ရွှေ - ငွေ စျေး</a></li>
+              <li> <a href="#">နည်းပညာ</a></li>
+              <li> <a href="#">အယ်ဒီတာ့ အာဘော်</a></li>
+              <li> <a href="#">ဆက်သွယ်ရန်</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="update-news container"> 
+      <button>Latest News</button>
+      <p> 
+        <marquee>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae vero modi laborum id ex totam mollitia debitis laudantium dolores possimus!</marquee>
+      </p>
+      <form> 
+        <input type="search"/>
+        <button type="submit" id="searchPost"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="slide-wrapper container"> 
+      <div class="slide-card"> 
+        <div class="slide-body"> <img src="./assets/images/1.jpg" name="slide"/></div>
+        <div class="slide-caption"> 
+          <input type="radio" name="slideradios" id="slideradio0" onclick="changeSlide(this.value)" value="0"/>
+          <input type="radio" name="slideradios" id="slideradio1" onclick="changeSlide(this.value)" value="1"/>
+          <input type="radio" name="slideradios" id="slideradio2" onclick="changeSlide(this.value)" value="2"/>
+          <input type="radio" name="slideradios" id="slideradio3" onclick="changeSlide(this.value)" value="3"/>
+          <input type="radio" name="slideradios" id="slideradio4" onclick="changeSlide(this.value)" value="4"/>
+        </div>
+        <div class="slide-footer"> 
+          <p>ခဲနဲ့ပေါက်တာကို ကျည်အစစ်နဲ့ မှန်‌အောင်ပစ်တာတော့ မဖြစ်သင့်ဘူး</p>
+        </div>
+      </div>
+      <div class="aside-wrapper">
+        <div class="aside-nav"> 
+          <button>လူမှုဘဝ</button>
+          <button>More +</button>
+        </div>
+        <div class="aside-body"> 
+          <figure> <img src="./assets/images/2.jpg" alt="slide 2 image"/>
+            <figcaption>ရှမ်းပြည်နယ်တွင် RCSS နှင့် SSPP တို့ချစ်တင်းနှော </figcaption>
+          </figure>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora animi saepe veniam numquam distinctio facilis quasi ut illo dolore reiciendis. Placeat sunt debitis veritatis eveniet sint, nemo laborum, molestias in tenetur asperiores consequatur eaque perferendis quam saepe officia doloribus, delectus natus deleniti odio quae accusamus. Incidunt sapiente necessitatibus inventore labore libero nesciunt tempora voluptate harum. Dolores voluptatum corrupti libero quia culpa id animi consectetur quisquam nisi provident delectus, nesciunt voluptas dolorum numquam, asperiores suscipit quos excepturi. Laborum provident rerum non? Sapiente magni sit quae! Voluptatem quibusdam molestiae quam aut at, facere magnam veritatis nesciunt quaerat, quia delectus, nobis eos nostrum?</p>
+        </div>
+      </div>
+    </div>
+    <section class="topnews-videonews container"> 
+      <div class="topnews"> 
+        <div class="aside-nav"> 
+          <button>ထိပ်တန်းသတင်း</button>
+          <button>More +</button>
+        </div>
+        <div class="topnewsarticle"> 
+          <figure> <img src="./assets/images/p1.jpg" alt="ရွှေတိဂုံဘုရား"/>
+            <figcaption>ရွှေတိဂုံဘုရား</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p2.jpg" alt="အောက်ဆီဂျင်ထုတ်ဖော်ပုံ"/>
+            <figcaption>အောက်ဆီဂျင်ထုတ်ဖော်ပုံ</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p3.jpg" alt="ဘယ်နေရာမှန်းမသိတဲ့ပုံ"/>
+            <figcaption>ဘယ်နေရာမှန်းမသိတဲ့ပုံ</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p4.jpg" alt="ပုဂံဘုရား"/>
+            <figcaption>ပုဂံဘုရား</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="videonews"> 
+        <div class="aside-nav"> 
+          <button>ရုပ်သံ</button>
+          <button>More +</button>
+        </div>
+        <div class="aside-body"> 
+          <video controls="controls"> 
+            <source src="./assets/videos/video.mp4"/>
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="topnews-videonews container"> 
+      <div class="topnews"> 
+        <div class="aside-nav"> 
+          <button>မြစ်ကြီးနားသတင်း</button>
+          <button>More +</button>
+        </div>
+        <div class="topnewsarticle"> 
+          <figure> <img src="./assets/images/p4.jpg"/>
+            <figcaption>ရွှေတိဂုံဘုရား</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p4.jpg"/>
+            <figcaption>အောက်ဆီဂျင်ထုတ်ဖော်ပုံ</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p4.jpg"/>
+            <figcaption>ဘယ်နေရာမှန်းမသိတဲ့ပုံ</figcaption>
+          </figure>
+          <figure> <img src="./assets/images/p4.jpg"/>
+            <figcaption>ပုဂံဘုရား</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="thumbnail-videos"> 
+        <div class="thumbvid"> 
+          <video controls="controls">
+            <source src="./assets/videos/video.mp4"/>
+          </video><a href="#">
+            Brighter Myanmar ကွန်ပျူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်မားစေရန် ရည်ရွယ်၍ 
+            </a>
+        </div>
+        <div class="thumbvid"> 
+          <video controls="controls">
+            <source src="./assets/videos/video.mp4"/>
+          </video><a href="#">
+            Brighter Myanmar ကွန်ပျူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်မားစေရန် ရည်ရွယ်၍ 
+            </a>
+        </div>
+        <div class="thumbvid"> 
+          <video controls="controls">
+            <source src="./assets/videos/video.mp4"/>
+          </video><a href="#">
+            Brighter Myanmar ကွန်ပျူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်မားစေရန် ရည်ရွယ်၍ 
+            </a>
+        </div>
+      </div>
+    </section>
     <div class="base"> 
+      <div style="height: 150px"></div>
       <script src="./assets/js/index.js"></script>
     </div>
   </body>

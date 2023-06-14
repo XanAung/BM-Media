@@ -1,0 +1,20 @@
+.slide-wrapper.container 
+    .slide-card 
+        .slide-body 
+            img(src="./assets/images/1.jpg" name="slide")
+        .slide-caption 
+            each ind in [0,1,2,3,4]
+                input(type="radio" name="slideradios" id=`slideradio${ind}` onclick="changeSlide(this.value)" value=ind)
+        .slide-footer 
+            p ခဲနဲ့ပေါက်တာကို ကျည်အစစ်နဲ့ မှန်‌အောင်ပစ်တာတော့ မဖြစ်သင့်ဘူး
+
+    .aside-wrapper
+        .aside-nav 
+            button လူမှုဘဝ
+            button More +
+        .aside-body 
+            figure 
+                +image("2.jpg","slide 2 image")
+                figcaption ရှမ်းပြည်နယ်တွင် RCSS နှင့် SSPP တို့ချစ်တင်းနှော 
+            p. 
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora animi saepe veniam numquam distinctio facilis quasi ut illo dolore reiciendis. Placeat sunt debitis veritatis eveniet sint, nemo laborum, molestias in tenetur asperiores consequatur eaque perferendis quam saepe officia doloribus, delectus natus deleniti odio quae accusamus. Incidunt sapiente necessitatibus inventore labore libero nesciunt tempora voluptate harum. Dolores voluptatum corrupti libero quia culpa id animi consectetur quisquam nisi provident delectus, nesciunt voluptas dolorum numquam, asperiores suscipit quos excepturi. Laborum provident rerum non? Sapiente magni sit quae! Voluptatem quibusdam molestiae quam aut at, facere magnam veritatis nesciunt quaerat, quia delectus, nobis eos nostrum?

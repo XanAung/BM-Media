@@ -1,0 +1,77 @@
+.side-nav-check,.inner-menu-check
+    display: none
+
+.inner-dropdown
+    visibility: hidden
+
+.mobile-nav
+    background-color: $primary
+    color: $accent
+    display: none
+    align-items: center
+    position: relative
+    height: 50px
+
+    @include mQ("768px")
+        display: flex
+
+    img 
+        margin: 0 20px
+
+    h3 
+        flex: 1
+        text-transform: uppercase
+        font-size: 20px
+    
+    i 
+        margin-right: 20px
+        // padding: 16px
+        font-size: 18px
+
+
+.side-nav-check:checked
+    &+.side-nav-wrapper
+        transform: scale(1,1)
+
+.side-nav-wrapper
+    background-color: $primary
+    position: absolute
+    right: 0
+    top: 50px
+    min-width: 250px
+    transform: scale(1,0)
+    transform-origin: top
+    transition: 300ms
+    
+.dropdown-menu
+    li 
+        line-height: 50px
+        border-bottom: 1px solid $fair
+        cursor: pointer
+
+        a 
+            color: $default
+            padding-left: 36px
+            transition: 300ms
+        
+        &:hover
+            background-color: $secondary
+
+            > a 
+                color: $accent
+                padding-left: 45px  
+
+.inner-menu-check
+    &:checked
+        &+.inner-dropdown
+            visibility: visible
+            transform: scale(1,1)
+
+.inner-dropdown
+    position: absolute
+    min-width: 250px
+    background-color: $primary
+    transform: scale(1,0)
+    transform-origin: top
+    transition: 300ms
+

@@ -1,29 +1,28 @@
 include partials/_mixins
 include partials/_top
-    .mobile-nav.container 
-        +image("logo.png","BM logo","30px","30px")
-        h3 BM Media 
-        label(for="side-nav-check")
-            i.fas.fa-bars
-        input(type="checkbox" id="side-nav-check" class="side-nav-check")
-        .side-nav-wrapper 
-            ul.dropdown-menu 
-                - const menuItems = ["ပြည်တွင်းသတင်း","မြစ်ကြီးနားသတင်း","ဆောင်းပါး","နိုင်ငံတကာ","အခြား"]
-                each item,i in menuItems 
-                    if i != 4
-                        li 
-                            a(href="#")= item
-                    else
-                        li 
-                            a(href="#")= item
-                            label(for="inner-menu-check")  
-                                i.fas.fa-sort-down
-                            input(type="checkbox" id="inner-menu-check" class="inner-menu-check")
-                            - const innerItems = ["အားကစား","ရွှေ - ငွေ စျေး","နည်းပညာ","အယ်ဒီတာ့ အာဘော်","ဆက်သွယ်ရန်"]
-                            ul.inner-dropdown 
-                                each itm in innerItems 
-                                    li 
-                                        a(href="#")= itm
-                            
+    include partials/_mobile_nav
     include partials/_header
+    include partials/_nav
+    include partials/_slide
+    include partials/_topnews
+    section.topnews-videonews.container 
+        .topnews 
+            .aside-nav 
+                button မြစ်ကြီးနားသတင်း
+                button More +
+
+            .topnewsarticle 
+                each nws in topNewsItems 
+                    figure 
+                        +image("p4.jpg")
+                        figcaption= nws.title
+
+        .thumbnail-videos 
+            each vid in [0,1,2]
+                .thumbvid 
+                    video(controls)
+                        source(src="./assets/videos/video.mp4")
+                    a(href="#"). 
+                        Brighter Myanmar ကွန်ပျူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်မားစေရန် ရည်ရွယ်၍ 
+
     include partials/_base

@@ -1,0 +1,46 @@
+.slide-wrapper 
+    display: grid 
+    grid-template-columns: 2fr 1fr
+    margin-top: 20px
+    grid-gap: 20px
+
+    @include mQ("768px")
+        grid-template-columns: 1fr
+
+    img 
+        width: 100%
+
+    .slide-card 
+        background-color: $primary
+        padding: 20px
+
+    .slide-body 
+        img 
+            border-radius: 8px
+    
+    .slide-caption
+        text-align: center
+        margin: 12px 0
+    
+    .slide-footer
+        text-align: center
+        color: $default
+
+    .aside-wrapper
+        background-color: $primary
+
+        
+        
+        .aside-body
+            padding: 20px
+
+            figure 
+                figcaption
+                    color: $default
+                    text-align: center
+                    margin: 10px 0
+            
+            p 
+                color: $default
+                text-indent: 20px
+                text-align: justify
