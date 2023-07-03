@@ -1,4 +1,4 @@
-const scrWidth = document.getElementById("screenWidth");
+// const scrWidth = document.getElementById("screenWidth");
 
 let curIndex = 0;
 let setCurIndex = false;
@@ -21,14 +21,14 @@ let autoSlide = () => {
     setTimeout("autoSlide()", 3000);
 }
 
-let onresize = () => {
-    width = document.body.clientWidth;
-    height = document.body.clientHeight;
-    scrWidth.innerHTML = width + " px";
-};
+// let onresize = () => {
+//     width = document.body.clientWidth;
+//     height = document.body.clientHeight;
+//     scrWidth.innerHTML = width + " px";
+// };
 
-window.addEventListener("resize", onresize);
-window.onload = onresize;
+// window.addEventListener("resize", onresize);
+// window.onload = onresize;
 window.onload = autoSlide;
 
 let sortDown = document.querySelector('.nav-sort-down');

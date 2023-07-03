@@ -1,28 +1,15 @@
+include partials/_variables
 include partials/_mixins
 include partials/_top
     include partials/_mobile_nav
     include partials/_header
     include partials/_nav
-    include partials/_slide
-    include partials/_topnews
-    section.topnews-videonews.container 
-        .topnews 
-            .aside-nav 
-                button မြစ်ကြီးနားသတင်း
-                button More +
 
-            .topnewsarticle 
-                each nws in topNewsItems 
-                    figure 
-                        +image("p4.jpg")
-                        figcaption= nws.title
+    include index/_slide
+    include index/_topnews
+    include index/_mknnews
+    include index/_innernews
+    include index/_interview
 
-        .thumbnail-videos 
-            each vid in [0,1,2]
-                .thumbvid 
-                    video(controls)
-                        source(src="./assets/videos/video.mp4")
-                    a(href="#"). 
-                        Brighter Myanmar ကွန်ပျူတာ ပညာရှင်များ အဖွဲ့မှ ကြီးမှူး၍ ၂၃ ကြိမ်မြောက် Programming သင်တန်းခွဲအား မြန်မာနိုင်ငံ ပညာလိုလားသူ လူကြီးလူငယ်များ Programming ဘာသာရပ် အဆင့်မြင့်မားစေရန် ရည်ရွယ်၍ 
-
+    include partials/_footer
     include partials/_base

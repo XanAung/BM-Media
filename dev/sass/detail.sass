@@ -1,0 +1,110 @@
+@use "modules/base"
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/share"
+@import partials/mobile_nav
+@import "partials/header"
+@import "partials/nav"
+
+.detailnews
+    display: grid 
+    grid-template-columns: 2fr 1fr 
+    grid-gap: 20px
+    margin-top: 20px
+
+    @include mQ("426px")
+        grid-template-columns: 1fr
+
+    img 
+        width: 100%
+
+    .detail
+        .tatin-bar
+            > h3 
+                background-color: transparent
+                text-align: center
+                display: block
+
+    .detail-slogan
+        padding: 12px 12px 0
+        background-color: $primary
+
+        .subtitle 
+            color: $default
+            display: flex
+            align-items: center
+            position: relative
+            padding: 22px 0
+
+
+            > * 
+                position: absolute
+                z-index: 3
+
+            .fa-camera 
+                font-size: 30px
+                background-color: $primary
+                padding-right: 5px
+                
+            .block-dash 
+                line-height: 2px
+                z-index: 2
+                top: 20px
+                overflow: hidden
+
+            .title 
+                right: 0
+                background-color: $primary
+                padding-left: 5px
+
+.detail-article-title  
+    p 
+        margin: 10px 0
+        font-size: 14px
+
+.detail-article-content
+    p 
+        font-size: 14px
+        text-align: justify
+        text-indent: 30px
+        line-height: 24px
+        margin-bottom: 10px
+
+.detail-article-footer 
+    p 
+        > *
+            font-size: 14px
+
+        span,i
+            padding-right: 10px
+
+.comment-box
+    form 
+        margin: 20px 0
+        > *
+            color: $default 
+            font-size: 1.1rem
+            
+            &:focus 
+                outline: none
+        input 
+            display: block
+            margin: 10px 0 
+            padding: 10px 20px
+            border: none 
+            background-color: $secondary
+            width: 300px
+
+        textarea 
+            min-height: 200px
+            width: 60%
+            background-color: $secondary
+
+        button 
+            display: block
+            background-color: $accent
+            border: none
+            padding: 10px 20px
+            margin-top: 10px
+            cursor: pointer
+@import "partials/footer"

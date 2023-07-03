@@ -1,0 +1,58 @@
+@use "modules/base"
+@import "partials/variables"
+@import "partials/mixins"
+@import "partials/share"
+@import partials/mobile_nav
+@import "partials/header"
+@import "partials/nav"
+
+.tatin
+    display: grid
+    grid-template-columns: 2fr 1fr
+    grid-gap: 20px
+    margin-top: 20px
+
+    @include mQ("426px")
+        grid-template-columns: 1fr
+
+    img 
+        width: 100%
+
+    .topnews-article 
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        margin-bottom: 10px
+
+        @include mQ("768px")
+            grid-template-columns: 1fr
+
+
+        .topnews-article-card 
+            > h3
+                text-align: center
+                font-size: 1.1rem
+                font-weight: bold
+                padding-top: 5px
+
+            > p 
+                padding: 16px
+                text-align: justify
+                font-size: .9rem
+                line-height: 26px
+                text-indent: 22px
+
+            @include mQ("1024px") 
+                > p 
+                    font-size: .8rem
+                    line-height: 20px
+                    padding-bottom: 0
+
+.aside-img-link 
+    margin-bottom: 10px
+    @include mQ("768px")
+        grid-template-columns: 1fr
+
+    @include mQ("426px")
+        grid-template-columns: repeat(2,1fr)
+
+@import "partials/footer"

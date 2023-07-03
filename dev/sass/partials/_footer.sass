@@ -1,0 +1,73 @@
+footer 
+    background-color: $primary
+    margin-top: 20px
+
+    .footer-inner
+        display: grid 
+        grid-template-columns: repeat(3,1fr)
+        align-items: center
+        padding: 20px 0
+
+        @include mQ("426px")
+            grid-template-columns: repeat(2,1fr)
+
+        ul
+            padding: 20px
+            color: $default
+
+            > h3
+                font-size: 1.5rem
+                padding: 10px 0
+            
+            > li
+                line-height: 26px
+                font-size: 1rem
+                
+                > a
+                    color: $fair
+
+                    &:hover 
+                        color: $accent
+        
+        form
+            position: relative
+            width: 100%
+            @include mQ("426px")
+                width: 80%
+                grid-column: 1/3
+                margin: 0 auto
+            legend 
+                font-size: 1.5rem
+                color: $default
+                padding: 10px 0
+            input
+                display: block
+                outline: none
+                border: none
+                padding: 8px 12px
+                margin-bottom: 10px
+                border-radius: 4px
+                width: 100%
+
+            button 
+                position: absolute
+                right: 0
+                padding: 8px 15px
+                background-color: $accent
+                color: $default
+                font-family: Raleway
+                border: none
+                font-weight: bold
+                border-radius: 4px
+                cursor: pointer
+
+.dev
+    background-color: $primary
+    
+    p
+        text-align: center
+        padding: 20px 0
+        box-shadow: 0 1px 0 $fair inset
+        margin-top: 20px
+        color: $fair
+        font-size: 1rem

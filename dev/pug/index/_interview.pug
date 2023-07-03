@@ -1,0 +1,12 @@
+.interview-article-ads.container 
+    .interview 
+        +interviewArticle("အင်တာဗျူး")
+        +interviewArticle("ဆောင်းပါး")
+        each ind in [1,2,3,4,5,6,7,8]
+            .aside-img-link
+                +image(`p${(ind%4)+1}.jpg`)
+                a(href="#") #{sampleParaShort}
+    .aside-img-link
+        each ind in [1,2,3,4,5,6,7,8]
+            +image(`p${(ind%4)+1}.jpg`)
+            a(href="#") #{sampleParaShort}

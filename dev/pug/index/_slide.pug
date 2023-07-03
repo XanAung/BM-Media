@@ -1,0 +1,20 @@
+.slide-wrapper.container 
+    .slide-card 
+        .slide-body 
+            img(src="./assets/images/1.jpg" name="slide")
+        .slide-caption 
+            each ind in [0,1,2,3,4]
+                input(type="radio" name="slideradios" id=`slideradio${ind}` onclick="changeSlide(this.value)" value=ind)
+        .slide-footer 
+            p ခဲနဲ့ပေါက်တာကို ကျည်အစစ်နဲ့ မှန်‌အောင်ပစ်တာတော့ မဖြစ်သင့်ဘူး
+
+    .aside-wrapper
+        .aside-nav 
+            button လူမှုဘဝ
+            button More +
+        .aside-body 
+            figure 
+                +image("2.jpg","slide 2 image")
+                figcaption #{sampleTitle} 
+            p. 
+                #{samplePara}

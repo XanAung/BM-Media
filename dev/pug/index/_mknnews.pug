@@ -1,0 +1,19 @@
+section.topnews-videonews.container 
+    .topnews 
+        .aside-nav 
+            button မြစ်ကြီးနားသတင်း
+            button More +
+
+        .topnewsarticle 
+            each nws in topNewsItems 
+                figure 
+                    +image("p4.jpg")
+                    figcaption= nws.title
+
+    .thumbnail-videos 
+        each vid in [0,1,2]
+            .thumbvid 
+                video(controls)
+                    source(src="./assets/videos/video.mp4")
+                a(href="#"). 
+                    #{sampleParaShort}

@@ -1,0 +1,24 @@
+footer 
+    .footer-inner.container
+        - const aboutMedias = ["About Us","How Organized","Advertisement","Apk Download","Our Facebook Page","About Us"]
+
+        ul 
+            h3 About Us 
+            each au in [0,1,2]
+                li 
+                    a(href="#")= aboutMedias[au]
+        
+        ul 
+            h3 Useful Link 
+            each au in [3,4,5]
+                li 
+                    a(href="#")= aboutMedias[au]
+
+        form 
+            legend User Login
+            input(type="text" placeholder="E-mail")
+            input(type="password" placeholder="Password")
+            button(type="submit") Login
+
+    .dev 
+        p Copyright@Brighter-Myanmar - since 2001

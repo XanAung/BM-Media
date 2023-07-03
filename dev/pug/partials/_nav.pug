@@ -15,16 +15,15 @@
                             label(for="nav-dropdown-check")= item.name
                                 i.fas.fa-sort-down.nav-sort-down
                             input(type="checkbox" id="nav-dropdown-check" class="nav-dropdown-check" onclick="changeSortDown(this)")
-                            - const navInnerItems = ["အားကစား","ရွှေ - ငွေ စျေး","နည်းပညာ","အယ်ဒီတာ့ အာဘော်","ဆက်သွယ်ရန်"]
                             ul.nav-dropdown
-                                each navitem in navInnerItems 
+                                each navitem in innerItems 
                                     li 
                                         a(href="#")= navitem
 
 .update-news.container 
         button Latest News
         p 
-            marquee Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae vero modi laborum id ex totam mollitia debitis laudantium dolores possimus!
+            marquee #{samplePara}
         form 
             input(type="search")
             button(type="submit" id="searchPost")

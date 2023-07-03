@@ -1,29 +1,15 @@
 @use "modules/base"
 @import "partials/variables"
 @import "partials/mixins"
+@import "partials/share"
 @import partials/mobile_nav
 @import "partials/header"
 @import "partials/nav"
-@import "partials/slide"
-@import "partials/topnews"
-.thumbvid 
-    display: grid
-    grid-template-columns: 1fr 1fr
-    margin-top: 10px
 
-    a 
-        font-size: 0.8rem
-        line-height: 18px
-        color: $primary
-        text-align: justify
-        margin-left: 5px
+@import "index/slide"
+@import "index/topnews"
+@import "index/mknnews"
+@import "index/innernews"
+@import "index/interview"
 
-        &:hover 
-            text-decoration: underline
-
-
-
-
-    
-
-
+@import "partials/footer"

@@ -1,0 +1,27 @@
+include partials/_variables
+include partials/_mixins
+include partials/_top
+    include partials/_mobile_nav
+    include partials/_header
+    include partials/_nav
+
+    .tatin.container 
+        .topnews 
+            .tatin-bar 
+                h3 အထူးသတင်း
+                
+            each idx in [1,2,3,4,5,6,7,8]
+                .topnews-article 
+                    +image("1.jpg") 
+                    .topnews-article-card 
+                        h3 #{sampleTitle}
+                        p #{samplePara}
+
+        .related-news 
+            .tatin-bar 
+                h3 ဆက်စပ်သတင်း
+
+            +connectedNews
+
+    include partials/_footer
+    include partials/_base

@@ -1,0 +1,38 @@
+.interview-article-ads
+    display: grid 
+    grid-template-columns: 2fr 1fr
+    grid-gap: 20px
+    align-items: start
+
+    @include mQ("768px")
+        grid-template-columns: 1fr
+
+    img 
+        width: 100%
+
+    .interview 
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        grid-gap: 10px
+        // align-items: start
+
+        @include mQ("426px")
+            grid-template-columns: 1fr
+
+
+        .aside-inter
+            background-color: $primary
+            padding-bottom: 10px
+
+            figure 
+                figcaption
+                    text-align: center
+                    padding: 10px 0
+                    color: $default
+            
+            p 
+                color: $default
+                padding: 10px
+                text-align: justify
+                line-height: 26px
+

@@ -1,0 +1,17 @@
+.thumbvid 
+    display: grid
+    grid-template-columns: 1fr 1fr
+    // margin-bottom: 10px
+
+    @include mQ("425px")
+        grid-template-columns: 1fr
+
+    a 
+        font-size: 0.8rem
+        line-height: 18px
+        color: $primary
+        text-align: justify
+        padding: 10px
+        
+        &:hover 
+            text-decoration: underline
